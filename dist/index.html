@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+    <title>NewsAPI</title>
 </head>
+
 <body>
+<header>
+    <h1>Hot News Everyday</h1>
+</header>
+
+<div class="content">
+    <main class="content">
+        <div class="search-wrapper">
+            <input type="text" name="search" placeholder="Find" class="search-edit">
+            <button class="search-btn">FIND</button>
+        </div>
+        <nav class="sources-container"></nav>
+        <div class="news-container"></div>
+        <div class="no-data">
+            <span>No items found ಠ╭╮ಠ</span>
+        </div>
+        <button class="load-more-btn" style="display:none">LOAD<br>MORE</button>
+    </main>
+</div>
+
+<footer>
+    <p class="copyright">Copyright <a href="https://newsapi.org">NewsAPI</a></p>
+</footer>
+
+<template id="source-item-tpl">
+    <button class="source__item" id="source-item"></button>
+</template>
+
+<template id="news-item-tpl">
+
+    <div class="news__item">
+        <div class="news__meta">
+            <div class="news__meta-photo"></div>
+        </div>
+        <a class="news__item-link" href="#">
+            <div class="news__description">
+                <h2 class="news__description-title"></h2>
+                <h3 class="news__description-source"></h3>
+                <p class="news__description-content"></p>
+                <p class="news__read-more">
+                </p>
+            </div>
+        </a>
+    </div>
+</template>
+
 <script src="main.js"></script>
 </body>
 </html>
