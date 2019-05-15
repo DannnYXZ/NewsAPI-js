@@ -119,6 +119,7 @@ header h1 {
 
 .news__item-link {
     text-decoration: none;
+    flex-basis: 60%;
     color: #333;
 }
 
@@ -150,8 +151,7 @@ h3 {
 
 .news__description {
     flex-direction: column;
-    margin: 1vw;
-    width: 30vw;
+    padding: 2vw;
 }
 
 .news__description-source {
@@ -212,6 +212,5 @@ footer {
     }
     .news__description {
         flex-direction: column;
-        width: 100%;
     }
 }
